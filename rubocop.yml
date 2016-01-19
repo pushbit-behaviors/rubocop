@@ -1,0 +1,11 @@
+Style/StringLiterals:
+  Enabled: false
+  
+Style/TrailingBlankLines:
+  Enabled: false
+  
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
