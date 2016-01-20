@@ -17,7 +17,6 @@ else
   reportable_files = reportable_files.reject do |i| 
     i.include?("schema.rb") 
   end
-  puts reportable_files.inspect
   added_files = reportable_files.count
   if added_files == 0
     puts "there were no reportable files"
@@ -25,7 +24,6 @@ else
   end
   reportable_files = reportable_files.join(" ")
   message = "Updated styles for pull request \##{ENV.fetch('GITHUB_NUMBER')}"
-  puts message.inspect
 end
 
 
@@ -67,18 +65,13 @@ if added_files > 0
     message: discovery_message
   }
 
-  puts "Posting the following discovery"
-  puts discovery.inspect
-
+  puts "Posting discovery"
   res = conn.post do |req|
     req.url '/discoveries'
     req.headers['Content-Type'] = 'application/json'
     req.headers['Authorization'] = "Basic #{ENV.fetch("ACCESS_TOKEN")}"
     req.body = discovery.to_json
   end
-
-  puts "Result"
-  puts res.inspect
 else
   puts "No files relevant to this pr were updated by rubocop"
 end
