@@ -1,0 +1,27 @@
+kind: rubocop
+name: Rubocop
+description: Tests your code against your teams style guide and fixes violations automatically.
+discovers: style violation
+checkout: patch
+author: 
+  name: Luke Roberts
+  email: awsmsrc@gmail.com
+repository:
+  type: git
+  url: https://github.com/pushbit-behaviors/rubocop
+tone: negative
+active: true
+tags:
+  - Ruby
+files: 
+  - !ruby/regexp '/.+\.rb\z/i'
+triggers:
+  - task_completed_unbox
+  - pull_request_opened
+actions:
+  - pull_request
+keywords:
+  - rubocop
+  - hint
+  - style
+  - guidelines
