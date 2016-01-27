@@ -1,4 +1,4 @@
-FROM pushbit/rubocop
+FROM pushbit/ruby
 
 MAINTAINER Luke Roberts "email@luke-roberts.co.uk"
 
