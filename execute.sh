@@ -1,5 +1,15 @@
 #!/bin/bash
 
+sleep 5
+
+echo "rubocop starting"
+echo "pwd"
+pwd
+echo "ls -la"
+ls -la
+echo "ls -la /root"
+ls -la /root
+
 echo "entering git repo"
 cd code
 
