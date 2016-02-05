@@ -9,4 +9,4 @@ ADD ./execute.sh ./execute.sh
 ADD ./execute.rb ./execute.rb
 ADD ./rubocop.yml ./.rubocop.yml
 
-CMD /bin/bash -c -l "./execute.sh"
+CMD ["./execute.sh"]
