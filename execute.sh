@@ -1,16 +1,6 @@
 #!/bin/bash
 
-sleep 5
-
-echo "rubocop starting"
-echo "pwd"
-pwd
-echo "ls -la"
-ls -la
-echo "ls -la /root"
-ls -la /root
-
-echo "entering git repo"
+echo "Entering code directory"
 cd code
 
 echo "Updating styles"
@@ -22,4 +12,4 @@ if [ $? -eq 0 ]; then
   exit 0
 fi
 
-echo ${OUTPUT_JSON} | ruby ../execute.rb 
+echo ${OUTPUT_JSON} | ruby ../execute.rb
